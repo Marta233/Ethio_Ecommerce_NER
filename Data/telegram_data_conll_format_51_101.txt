@@ -218,7 +218,7 @@
 ቁጥር O
 2 O
 ጀሞ B-LOC
-1 I-LOC
+1 O
 ከለላ I-LOC
 ህንፃ I-LOC
 ግራውንድ I-LOC
