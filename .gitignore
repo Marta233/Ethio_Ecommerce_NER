@@ -1,5 +1,6 @@
 *.csv
 *.xlsx
-.venv
+venv
 __pycache__/
 .env
+*.txt
