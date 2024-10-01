@@ -47,6 +47,12 @@ class TelegramPreprocessor:
         cleaned_text = text.strip()
         print(f"Cleaned text: {cleaned_text}")
         return cleaned_text
+    def remove_duplicates(self):
+        """Remove duplicate text entries."""
+        initial_shape = self.data.shape
+        self.data.drop_duplicates(subset='text', inplace=True)
+        final_shape = self.data.shape
+        print(f"Removed {initial_shape[0] - final_shape[0]} duplicate rows. Dataset shape after deduplication: {final_shape}")
 
     def label_message_utf8_with_birr(self, message):
         """Label messages for product, price, and location."""

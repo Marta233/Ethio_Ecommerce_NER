@@ -1,0 +1,36 @@
+# Function to read a CoNLL file
+def read_conll_file(file_path):
+    """
+    Reads a CoNLL file and returns the list of lines.
+    
+    :param file_path: Path to the CoNLL file.
+    :return: List of lines in the file.
+    """
+    with open(file_path, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+    return lines
+
+# Function to concatenate multiple CoNLL files
+def concatenate_conll_files(file_paths):
+    """
+    Concatenates the content of multiple CoNLL files.
+    
+    :param file_paths: List of paths to the CoNLL files.
+    :return: List of concatenated lines from all files.
+    """
+    concatenated_lines = []
+    for file_path in file_paths:
+        lines = read_conll_file(file_path)
+        concatenated_lines.extend(lines)
+    return concatenated_lines
+
+# Function to write concatenated content to a new CoNLL file
+def write_conll_file(output_file, lines):
+    """
+    Writes the concatenated lines into a new CoNLL file.
+    
+    :param output_file: Path to the output file.
+    :param lines: List of lines to be written to the file.
+    """
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.writelines(lines)
