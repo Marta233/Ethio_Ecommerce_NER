@@ -11,6 +11,7 @@ This repository is developed collaboratively by **Getahun Tiruneh** and **Marta 
   - [Generate CoNLL Output](#generate-conll-output)
   - [Dynamic Batching](#dynamic-batching)
   - [Fine-Tune the Model for NER](#fine-tune-the-model-for-ner)
+- [Model Information](#model-information)
 - [File Structure](#file-structure)
 - [Contributing](#contributing)
 - [License](#license)
@@ -95,6 +96,14 @@ trainer = Trainer(
 # Fine-tune the model
 trainer.train()
 ```
+
+## Model Information
+
+The models used in this repository include:
+
+- **XLM-RoBERTa**: A multilingual transformer model designed for various NLP tasks, including Named Entity Recognition (NER). It has been pre-trained on a large corpus of multilingual data, making it suitable for tasks in the Amharic language.
+  
+- **Custom NER Model**: This is a fine-tuned version of XLM-RoBERTa specifically for the Amharic NER task. It has been trained on labeled data from the Qenash.com e-commerce channel to accurately identify entities related to prices, locations, and products.
 
 ## Data Source
 
